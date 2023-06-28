@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        function_name = 'newlambda'
+        function_name = 'new'
     }
 
     stages {
