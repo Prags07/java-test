@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        function_name = 'prag-lambda'
+        function_name = 'newlambda'
     }
 
     stages {
