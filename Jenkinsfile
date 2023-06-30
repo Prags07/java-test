@@ -49,19 +49,21 @@ pipeline {
         // CD Started
 
        
-        parallel {
-            stage('Deploy to Dev') {
-                steps {
-                    echo 'Build'
+        stage("Deployment") {
+            parallel {
+                stage('Deploy to Dev') {
+                    steps {
+                        echo 'Build'
+                    }
                 }
-            }
 
-            stage('Deploy to test ') {
-                when {
-                    branch 'main'
-                }
-                steps {
-                    echo 'Build'
+                stage('Deploy to test ') {
+                    when {
+                        branch 'main'
+                    }
+                    steps {
+                        echo 'Build'
+                    }
                 }
             }
         }
